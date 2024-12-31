@@ -20,9 +20,12 @@ function renderData(){
     function generatePokemon(pokemon){
         const pane = document.querySelector(".pane");
         const renderData = document.querySelector(".render-img");
+        const renderData2 = document.querySelector(".render-img2");
         const renderText = document.querySelector(".render-text");
         renderData.innerHTML=' ';
         renderText.innerHTML= ' ';
+        renderData2.innerHTML = " ";
+
         console.log(pokemon);
         let pokemonName = pokemon.forms[0].name;
         let spriteLocationFront = pokemon.sprites.front_default;
@@ -31,11 +34,15 @@ function renderData(){
         let pokeNameText = document.createTextNode("Name: " + pokemonName);
         let pokeImageFront = document.createElement('img');
         let pokeImageBack = document.createElement('img');
+        let pokeImageBack2 = document.createElement("img");
         pokeImageFront.src=spriteLocationFront;
         pokeImageBack.src = spriteLocationBack;
+        pokeImageBack2.src = spriteLocationFront
 
         renderText.appendChild(pokeNameText);
         renderData.appendChild(pokeImageFront);
+        renderData2.appendChild(pokeImageFront);
+
         if(spriteLocationBack != null){
             renderData.appendChild(pokeImageBack);
 

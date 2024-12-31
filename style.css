@@ -38,6 +38,7 @@ body{
     display: flex;
     margin: 50px 5px 50px 5px;
     justify-content: center;
+    flex-direction: "column";
 }
 .render-img{
     width: 180px;
